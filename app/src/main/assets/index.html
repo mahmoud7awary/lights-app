@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0e1020">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Lights">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="icon" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<title>Lights</title>
+<style>
+:root{
+  --night:#0e1020;
+  --panel:rgba(255,255,255,.055);
+  --edge:rgba(255,255,255,.11);
+  --text:#f4f1ea;
+  --muted:#8b90b0;
+  --lamp:#ffc766;
+  --lamp-deep:#ff9f43;
+  --ok:#5eead4;
+  --bad:#ff6b6b;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;min-height:100%}
+body{
+  font-family:ui-rounded,"SF Pro Rounded",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(800px 520px at 85% -10%,#3a2f7a55,transparent 70%),
+    radial-gradient(700px 500px at -10% 110%,#124a5a55,transparent 70%),
+    var(--night);
+  background-attachment:fixed;
+  padding:max(22px,env(safe-area-inset-top)) 18px max(26px,env(safe-area-inset-bottom));
+}
+main{max-width:440px;margin:0 auto}
+button{font:inherit;color:inherit}
+
+header{display:flex;justify-content:space-between;align-items:flex-start;margin:10px 4px 26px}
+h1{font-size:30px;line-height:1.1;font-weight:700;letter-spacing:-.02em;margin:0}
+h2{font-size:22px;font-weight:650;letter-spacing:-.015em;margin:38px 4px 4px}
+.count,.clock{color:var(--muted);font-size:14px;margin-top:6px;min-height:1.2em}
+.clock{margin:0 4px 16px}
+
+.pill{
+  display:flex;align-items:center;gap:8px;margin-top:4px;
+  font-size:12.5px;color:var(--muted);
+  padding:7px 12px;border-radius:999px;
+  background:var(--panel);border:1px solid var(--edge);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--bad);transition:background .3s,box-shadow .3s}
+.pill.live .dot{background:var(--ok);box-shadow:0 0 10px var(--ok)}
+.pill.poll .dot{background:var(--lamp)}
+
+#list,#tlist{display:flex;flex-direction:column;gap:14px}
+#tlist{gap:10px}
+
+.card{
+  position:relative;overflow:hidden;
+  display:flex;align-items:center;gap:16px;
+  padding:20px 20px 20px 18px;border-radius:26px;
+  background:var(--panel);border:1px solid var(--edge);
+  backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);
+  transition:border-color .5s,background .5s,opacity .3s;
+}
+.card::before{
+  content:"";position:absolute;left:-40px;top:50%;width:260px;height:260px;margin-top:-130px;
+  background:radial-gradient(circle,rgba(255,199,102,.42),rgba(255,159,67,.12) 45%,transparent 70%);
+  opacity:0;transform:scale(.6);transition:opacity .6s ease,transform .6s ease;pointer-events:none;
+}
+.card.on{border-color:rgba(255,199,102,.38)}
+.card.on::before{opacity:1;transform:scale(1)}
+
+.bulb{position:relative;flex:none;width:44px;height:44px;color:#5b6082;transition:color .5s,filter .5s}
+.card.on .bulb{color:var(--lamp);filter:drop-shadow(0 0 10px rgba(255,199,102,.7))}
+.bulb svg{width:100%;height:100%;display:block}
+
+.meta{position:relative;flex:1;min-width:0}
+.name{
+  display:block;width:100%;text-align:left;background:none;border:0;padding:0;margin:0;
+  font-size:18px;font-weight:600;color:var(--text);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:text;
+}
+.status{margin-top:3px;font-size:13.5px;color:var(--muted);transition:color .4s}
+.card.on .status{color:var(--lamp)}
+
+/* iOS-style switch */
+.switch{
+  position:relative;flex:none;width:62px;height:38px;border-radius:999px;border:0;padding:0;cursor:pointer;
+  background:rgba(120,126,160,.35);
+  transition:background .3s ease;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);
+}
+.switch::after{
+  content:"";position:absolute;top:3px;left:3px;width:32px;height:32px;border-radius:50%;
+  background:#fff;box-shadow:0 3px 8px rgba(0,0,0,.35),0 1px 2px rgba(0,0,0,.3);
+  transition:transform .32s cubic-bezier(.3,1.4,.5,1),width .18s ease;
+}
+.switch:active::after{width:38px}
+.switch[aria-checked="true"]{background:var(--lamp-deep)}
+.switch[aria-checked="true"]::after{transform:translateX(24px)}
+.switch[aria-checked="true"]:active::after{transform:translateX(18px)}
+.switch.sm{width:52px;height:32px}
+.switch.sm::after{width:26px;height:26px}
+.switch.sm:active::after{width:31px}
+.switch.sm[aria-checked="true"]::after{transform:translateX(20px)}
+.switch.sm[aria-checked="true"]:active::after{transform:translateX(15px)}
+.switch:focus-visible,.name:focus-visible,.timer:focus-visible,.chip:focus-visible,.seg button:focus-visible,.btn:focus-visible{outline:2px solid var(--lamp);outline-offset:3px}
+.name:focus-visible{border-radius:6px}
+
+.card.busy .switch{opacity:.65}
+body.offline .card,body.offline .timer{opacity:.5}
+body.offline .switch,body.offline .timer{pointer-events:none}
+
+/* timers */
+.timer{
+  display:flex;align-items:center;gap:16px;cursor:pointer;
+  padding:14px 18px;border-radius:22px;
+  background:var(--panel);border:1px solid var(--edge);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  transition:opacity .3s,border-color .4s;
+}
+.timer.on{border-color:rgba(255,199,102,.32)}
+.ttime{flex:none;font-size:30px;font-weight:300;letter-spacing:-.02em;font-variant-numeric:tabular-nums;transition:color .3s}
+.ttime small{font-size:14px;font-weight:500;margin-left:4px;color:var(--muted)}
+.tinfo{flex:1;min-width:0}
+.tinfo .l1{font-size:15px;font-weight:600;line-height:1.25}
+.tinfo .l2,.tinfo .l3{font-size:13px;color:var(--muted);margin-top:2px;line-height:1.3}
+.tinfo .l3{color:var(--lamp)}
+.timer:not(.on) .ttime,.timer:not(.on) .tinfo .l1{color:#8b90b0}
+
+.note{margin:26px 6px 0;color:var(--muted);font-size:12.5px;line-height:1.5;text-align:center}
+
+/* edit sheet */
+.scrim{
+  position:fixed;inset:0;z-index:10;display:flex;align-items:flex-end;justify-content:center;
+  background:rgba(5,6,14,.62);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  opacity:0;pointer-events:none;transition:opacity .25s;
+}
+.scrim.open{opacity:1;pointer-events:auto}
+.sheet{
+  width:100%;max-width:440px;max-height:92%;overflow:auto;
+  background:#181b33;border:1px solid var(--edge);border-bottom:0;border-radius:28px 28px 0 0;
+  padding:12px 22px calc(22px + env(safe-area-inset-bottom));
+  transform:translateY(100%);transition:transform .35s cubic-bezier(.2,.9,.3,1);
+}
+.scrim.open .sheet{transform:none}
+.grab{width:38px;height:5px;border-radius:3px;background:rgba(255,255,255,.2);margin:0 auto 14px}
+.sheet h3{margin:0 0 14px;font-size:19px;font-weight:650;text-align:center}
+.timeinput{
+  width:100%;font:inherit;font-size:44px;font-weight:300;text-align:center;color:var(--text);color-scheme:dark;
+  background:rgba(255,255,255,.06);border:1px solid var(--edge);border-radius:18px;padding:8px;
+}
+.lbl{font-size:13.5px;color:var(--muted);margin:18px 2px 8px}
+.chips{display:flex;gap:6px}
+.chip{
+  flex:1;padding:11px 0;border-radius:12px;border:1px solid var(--edge);background:transparent;
+  color:var(--muted);font-size:13px;cursor:pointer;transition:background .2s,color .2s;
+}
+.chip[aria-pressed="true"]{background:var(--lamp-deep);border-color:transparent;color:#2a1700;font-weight:650}
+.seg{display:flex;gap:3px;padding:3px;border-radius:14px;background:rgba(255,255,255,.06)}
+.seg button{flex:1;border:0;background:transparent;color:var(--muted);font-size:14px;padding:11px 4px;border-radius:11px;cursor:pointer;transition:background .2s,color .2s}
+.seg button[aria-checked="true"]{background:rgba(255,255,255,.15);color:var(--text)}
+.hint{min-height:18px;margin:10px 2px 0;font-size:13px;color:var(--bad)}
+.actions{display:flex;gap:10px;margin-top:8px}
+.btn{flex:1;padding:15px;border-radius:16px;border:1px solid var(--edge);background:transparent;font-size:16px;font-weight:600;cursor:pointer}
+.btn.primary{background:var(--lamp-deep);border-color:transparent;color:#2a1700}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+[hidden]{display:none!important}
+.hright{display:flex;align-items:center;gap:8px}
+.gear{width:36px;height:36px;margin-top:4px;border-radius:50%;border:1px solid var(--edge);background:var(--panel);color:var(--muted);display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.gear svg{width:18px;height:18px}
+.ringrow{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:18px;padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.06)}
+.ringrow .rt{font-size:15px;font-weight:600}
+.ringrow .rs{font-size:12.5px;color:var(--muted);margin-top:2px}
+.textinput{width:100%;font:inherit;font-size:18px;color:var(--text);background:rgba(255,255,255,.06);border:1px solid var(--edge);border-radius:14px;padding:13px 14px}
+.hint.ok{color:var(--muted)}
+.btn.block{width:100%;flex:none;margin-top:8px;font-size:15px;padding:13px}
+</style>
+</head>
+<body class="offline">
+<main>
+  <header>
+    <div>
+      <h1>Lights</h1>
+      <div class="count" id="count">Connecting…</div>
+    </div>
+    <div class="hright"><div class="pill" id="pill"><span class="dot"></span><span id="pillText">Offline</span></div><button class="gear" id="gear" type="button" aria-label="Settings" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></button></div>
+  </header>
+
+  <section id="list" aria-label="Lights"></section>
+
+  <h2>Timers</h2>
+  <p class="clock" id="clock">Waiting for the controller…</p>
+  <section id="tlist" aria-label="Timers"></section>
+
+  <p class="note">Tap a light's name to rename it. Wall switches and timers update this page instantly.</p>
+</main>
+
+<div class="scrim" id="scrim" aria-hidden="true">
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <div class="grab"></div>
+    <h3 id="sheetTitle">Edit timer</h3>
+    <input class="timeinput" id="fTime" type="time" aria-label="Time">
+    <div class="lbl">Repeat on</div>
+    <div class="chips" id="fDays"></div>
+    <div class="lbl">Light</div>
+    <div class="seg" id="fRelay" role="radiogroup" aria-label="Light"></div>
+    <div class="lbl">Action</div>
+    <div class="seg" id="fAction" role="radiogroup" aria-label="Action"></div>
+    <div class="ringrow" id="ringRow" hidden><div><div class="rt">Also ring this phone</div><div class="rs">Plays a real alarm on this phone</div></div><button class="switch sm" id="fRing" role="switch" aria-checked="false" type="button" aria-label="Also ring this phone"></button></div>
+    <div class="hint" id="fHint" role="alert"></div>
+    <div class="actions">
+      <button class="btn" id="fCancel" type="button">Cancel</button>
+      <button class="btn primary" id="fSave" type="button">Save timer</button>
+    </div>
+  </div>
+</div>
+
+<div class="scrim" id="scrim2" aria-hidden="true">
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="setTitle">
+    <div class="grab"></div>
+    <h3 id="setTitle">Settings</h3>
+    <div class="lbl" style="margin-top:4px">Controller address</div>
+    <input class="textinput" id="fHost" type="text" inputmode="url" autocapitalize="none" autocomplete="off" spellcheck="false" placeholder="192.168.1.37" aria-label="Controller address">
+    <div class="hint ok" id="hostMsg" role="status"></div>
+    <div class="actions">
+      <button class="btn" id="sTest" type="button">Test connection</button>
+      <button class="btn primary" id="sSave" type="button">Save</button>
+    </div>
+    <div class="lbl" style="margin-top:24px">Phone alarms</div>
+    <button class="btn block" id="sAlarm" type="button">Ring this phone in 10 seconds</button>
+    <button class="btn block" id="sNotif" type="button">Notification settings</button>
+    <button class="btn block" id="sFull" type="button">Full-screen alarm settings</button>
+    <button class="btn block" id="sBatt" type="button">Battery settings</button>
+    <div class="hint ok" id="permMsg" role="status"></div>
+    <div class="actions"><button class="btn" id="sClose" type="button">Close</button></div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const N = 2;
+  const BULB = '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17 33c0-3-3.5-5-3.5-10.5a10.5 10.5 0 0 1 21 0C34.5 28 31 30 31 33v2H17z" fill="currentColor" fill-opacity=".18"/><path d="M18.5 40h11M20.5 44h7"/></svg>';
+  const $ = id => document.getElementById(id);
+
+  /* In the Android app the page is bundled inside the app and talks to the controller by address. */
+  const IS_APP = typeof Android !== 'undefined';
+  let HOST = IS_APP ? Android.getHost() : location.host;
+  const base = () => (IS_APP ? 'http://' + HOST : '');
+  const jfetch = (path, opt) => {
+    const c = new AbortController();
+    const t = setTimeout(() => c.abort(), 4000);
+    return fetch(base() + path, Object.assign({ cache: 'no-store', signal: c.signal }, opt || {}))
+      .finally(() => clearTimeout(t));
+  };
+  let ring = [false, false, false, false];
+  if (IS_APP) { try { ring = JSON.parse(Android.getRing()); } catch (e) {} }
+
+  let names;
+  try { names = JSON.parse(localStorage.getItem('lightNames')); } catch (e) {}
+  if (!Array.isArray(names)) names = [];
+  for (let i = 0; i < N; i++) names[i] = names[i] || 'Light ' + (i + 1);
+
+  const state = new Array(N).fill(false);
+  const list = $('list');
+  const cards = [];
+
+  /* ---------------- lights ---------------- */
+  for (let i = 0; i < N; i++) {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML =
+      '<div class="bulb">' + BULB + '</div>' +
+      '<div class="meta"><button class="name" type="button"></button><div class="status">Off</div></div>' +
+      '<button class="switch" role="switch" aria-checked="false" type="button"></button>';
+    const nameBtn = card.querySelector('.name');
+    const sw = card.querySelector('.switch');
+    nameBtn.textContent = names[i];
+    sw.setAttribute('aria-label', names[i]);
+
+    nameBtn.addEventListener('click', () => {
+      const v = prompt('Rename light', names[i]);
+      if (v && v.trim()) {
+        names[i] = v.trim().slice(0, 24);
+        nameBtn.textContent = names[i];
+        sw.setAttribute('aria-label', names[i]);
+        try { localStorage.setItem('lightNames', JSON.stringify(names)); } catch (e) {}
+        renderTimers();
+      }
+    });
+
+    // The switch never flips on its own: it only follows the real relay state
+    // reported by the ESP32, so the UI cannot drift from the hardware.
+    sw.addEventListener('click', () => {
+      card.classList.add('busy');
+      clearTimeout(card._t);
+      card._t = setTimeout(() => card.classList.remove('busy'), 1500);
+      send('toggle,' + i, '/toggle?id=' + i);
+    });
+
+    list.appendChild(card);
+    cards.push({ card, sw, status: card.querySelector('.status') });
+  }
+
+  function render() {
+    let on = 0;
+    cards.forEach((c, i) => {
+      const s = state[i];
+      if (s) on++;
+      c.card.classList.toggle('on', s);
+      c.sw.setAttribute('aria-checked', s ? 'true' : 'false');
+      c.status.textContent = s ? 'On' : 'Off';
+    });
+    $('count').textContent =
+      on === 0 ? 'All lights are off' : on === N ? 'All lights are on' : on + ' of ' + N + ' lights on';
+  }
+
+  /* ---------------- timers ---------------- */
+  const DAY_ORDER = [6, 0, 1, 2, 3, 4, 5];                       // week starts on Saturday
+  const DAY_SHORT = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  let timers = [];
+  let clockInfo = null;
+
+  const pad = n => String(n).padStart(2, '0');
+  const t12 = (h, m) => (h % 12 || 12) + ':' + pad(m);
+  const ampm = h => (h < 12 ? 'AM' : 'PM');
+  const daysText = d => {
+    if (d === 127) return 'Every day';
+    const on = DAY_ORDER.map(x => (d >> x) & 1);
+    if (!on.some(Boolean)) return 'No days chosen';
+    const out = [];
+    for (let i = 0; i < 7;) {
+      if (!on[i]) { i++; continue; }
+      let j = i;
+      while (j + 1 < 7 && on[j + 1]) j++;
+      if (j - i >= 2) out.push(DAY_SHORT[DAY_ORDER[i]] + ' to ' + DAY_SHORT[DAY_ORDER[j]]);
+      else for (let k = i; k <= j; k++) out.push(DAY_SHORT[DAY_ORDER[k]]);
+      i = j + 1;
+    }
+    return out.join(', ');
+  };
+  const lightText = r => (r === 2 ? 'both lights' : names[r] || 'light');
+
+  function renderClock() {
+    $('clock').textContent = !clockInfo ? 'Waiting for the controller…'
+      : clockInfo.synced ? 'Controller clock: ' + t12(+clockInfo.now.slice(0, 2), +clockInfo.now.slice(3)) + ' ' + ampm(+clockInfo.now.slice(0, 2))
+      : 'Setting the clock from the internet…';
+  }
+
+  function renderTimers() {
+    const box = $('tlist');
+    box.textContent = '';
+    timers.forEach((t, i) => {
+      const row = document.createElement('div');
+      row.className = 'timer' + (t.e ? ' on' : '');
+      row.tabIndex = 0;
+      row.setAttribute('role', 'button');
+      row.setAttribute('aria-label', 'Edit timer ' + (i + 1));
+
+      const time = document.createElement('div');
+      time.className = 'ttime';
+      time.textContent = t12(t.h, t.m);
+      const ap = document.createElement('small');
+      ap.textContent = ampm(t.h);
+      time.appendChild(ap);
+
+      const info = document.createElement('div');
+      info.className = 'tinfo';
+      const l1 = document.createElement('div');
+      l1.className = 'l1';
+      l1.textContent = (t.a ? 'Turn on ' : 'Turn off ') + lightText(t.r);
+      const l2 = document.createElement('div');
+      l2.className = 'l2';
+      l2.textContent = daysText(t.d);
+      info.append(l1, l2);
+      if (IS_APP && ring[i] && t.e) {
+        const l3 = document.createElement('div');
+        l3.className = 'l3';
+        l3.textContent = 'Rings this phone too';
+        info.append(l3);
+      }
+
+      const sw = document.createElement('button');
+      sw.className = 'switch sm';
+      sw.type = 'button';
+      sw.setAttribute('role', 'switch');
+      sw.setAttribute('aria-checked', t.e ? 'true' : 'false');
+      sw.setAttribute('aria-label', 'Timer ' + (i + 1) + ' enabled');
+      sw.addEventListener('click', ev => { ev.stopPropagation(); sendSched(i, Object.assign({}, t, { e: t.e ? 0 : 1 })); });
+
+      row.append(time, info, sw);
+      row.addEventListener('click', () => openSheet(i));
+      row.addEventListener('keydown', ev => { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); openSheet(i); } });
+      box.appendChild(row);
+    });
+  }
+
+  /* edit sheet */
+  let editing = -1, edit = { d: 127, r: 2, a: 1 };
+  const scrim = $('scrim');
+
+  function buildChips() {
+    const box = $('fDays');
+    DAY_ORDER.forEach(x => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'chip'; b.textContent = DAY_SHORT[x];
+      b.setAttribute('aria-pressed', 'false'); b.dataset.d = x;
+      b.addEventListener('click', () => { edit.d ^= (1 << x); paintSheet(); });
+      box.appendChild(b);
+    });
+  }
+  function seg(boxId, items, key) {
+    const box = $(boxId);
+    box.textContent = '';
+    items.forEach(([label, val]) => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.textContent = label; b.setAttribute('role', 'radio');
+      b.setAttribute('aria-checked', String(edit[key] === val));
+      b.addEventListener('click', () => { edit[key] = val; paintSheet(); });
+      box.appendChild(b);
+    });
+  }
+  function paintSheet() {
+    $('fDays').querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', String(!!((edit.d >> +c.dataset.d) & 1))));
+    seg('fRelay', [[names[0], 0], [names[1], 1], ['Both', 2]], 'r');
+    seg('fAction', [['Turn on', 1], ['Turn off', 0]], 'a');
+    $('fHint').textContent = '';
+  }
+  function openSheet(i) {
+    editing = i;
+    const t = timers[i];
+    edit = { d: t.d, r: t.r, a: t.a };
+    $('fTime').value = pad(t.h) + ':' + pad(t.m);
+    $('sheetTitle').textContent = 'Edit timer ' + (i + 1);
+    paintSheet();
+    if (IS_APP) { $('ringRow').hidden = false; edit.ring = !!ring[i]; paintRing(); }
+    scrim.classList.add('open');
+    scrim.setAttribute('aria-hidden', 'false');
+  }
+  function closeSheet() { scrim.classList.remove('open'); scrim.setAttribute('aria-hidden', 'true'); }
+
+  $('fCancel').addEventListener('click', closeSheet);
+  scrim.addEventListener('click', e => { if (e.target === scrim) closeSheet(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSheet(); });
+  $('fSave').addEventListener('click', () => {
+    const v = $('fTime').value;
+    if (!/^\d\d:\d\d$/.test(v)) { $('fHint').textContent = 'Choose a time.'; return; }
+    if (!edit.d) { $('fHint').textContent = 'Choose at least one day.'; return; }
+    if (IS_APP) { ring[editing] = !!edit.ring; Android.setRing(editing, !!edit.ring); }
+    sendSched(editing, { e: 1, h: +v.slice(0, 2), m: +v.slice(3), d: edit.d, r: edit.r, a: edit.a });
+    syncAlarms();
+    closeSheet();
+  });
+  buildChips();
+
+  function sendSched(i, t) {
+    const q = [i, t.e, t.h, t.m, t.d, t.r, t.a];
+    if (ws && ws.readyState === 1) { ws.send('sched,' + q.join(',')); return; }
+    jfetch('/sched?i=' + q[0] + '&e=' + q[1] + '&h=' + q[2] + '&m=' + q[3] + '&d=' + q[4] + '&r=' + q[5] + '&a=' + q[6], { method: 'POST' })
+      .then(r => r.json()).then(apply).catch(() => setLink('off'));
+  }
+
+  /* ---------------- data from the controller ---------------- */
+  function apply(data) {
+    if (!data) return;
+    if (Array.isArray(data.relays)) {
+      for (let i = 0; i < N; i++) state[i] = !!data.relays[i];
+      cards.forEach(c => { c.card.classList.remove('busy'); clearTimeout(c.card._t); });
+      render();
+    }
+    if (Array.isArray(data.sched)) {
+      timers = data.sched;
+      clockInfo = { synced: data.synced, now: data.now || '00:00' };
+      renderClock();
+      renderTimers();
+      syncAlarms();
+    }
+  }
+
+  function setLink(mode) {            // 'live' | 'poll' | 'off'
+    $('pill').className = 'pill ' + mode;
+    $('pillText').textContent = mode === 'live' ? 'Live' : mode === 'poll' ? 'Syncing' : 'Offline';
+    document.body.classList.toggle('offline', mode === 'off');
+    if (mode === 'off') $('count').textContent = 'Controller not reachable';
+  }
+
+  /* ---------------- transport: WebSocket first, HTTP polling as a fallback ---------------- */
+  let ws = null, pollTimer = null, retryTimer = null;
+
+  function poll() {
+    jfetch('/state')
+      .then(r => r.json())
+      .then(d => { apply(d); if (!(ws && ws.readyState === 1)) setLink('poll'); })
+      .catch(() => { if (!(ws && ws.readyState === 1)) setLink('off'); });
+    jfetch('/schedules').then(r => r.json()).then(apply).catch(() => {});
+  }
+  function startPolling() { if (!pollTimer) { poll(); pollTimer = setInterval(poll, 2500); } }
+  function stopPolling()  { clearInterval(pollTimer); pollTimer = null; }
+
+  function connect() {
+    clearTimeout(retryTimer);
+    if (ws && ws.readyState <= 1) return;
+    try {
+      ws = new WebSocket(IS_APP ? 'ws://' + HOST + '/ws' : (location.protocol === 'https:' ? 'wss://' : 'ws://') + location.host + '/ws');
+    } catch (e) { startPolling(); retryTimer = setTimeout(connect, 3000); return; }
+    ws.onopen = () => { stopPolling(); setLink('live'); };
+    ws.onmessage = e => { try { apply(JSON.parse(e.data)); } catch (err) {} };
+    ws.onclose = () => { startPolling(); retryTimer = setTimeout(connect, 2500); };
+    ws.onerror = () => ws.close();
+  }
+
+  function send(msg, url) {
+    if (ws && ws.readyState === 1) { ws.send(msg); return; }
+    jfetch(url, { method: 'POST' }).then(poll).catch(() => setLink('off'));
+  }
+
+  // Phones suspend sockets in the background: resync as soon as the page returns.
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') { connect(); poll(); }
+  });
+
+  /* ---------------- phone alarms + app settings (Android app only) ---------------- */
+  function paintRing() { $('fRing').setAttribute('aria-checked', String(!!edit.ring)); }
+  function syncAlarms() {
+    if (!IS_APP || !timers.length) return;
+    Android.syncAlarms(JSON.stringify(timers.map((t, i) => ({ ring: !!ring[i] && !!t.e, e: t.e, h: t.h, m: t.m, d: t.d }))));
+  }
+  $('fRing').addEventListener('click', () => { edit.ring = !edit.ring; paintRing(); });
+
+  if (IS_APP) {
+    $('gear').hidden = false;
+    const scrim2 = $('scrim2');
+    const open2 = () => {
+      $('fHost').value = HOST;
+      $('hostMsg').textContent = '';
+      let msg = '';
+      try {
+        const st = JSON.parse(Android.status());
+        msg = 'Notifications: ' + (st.notif ? 'on' : 'off, turn them on so the alarm can show') + '. Full-screen alarm: ' + (st.fsi ? 'allowed' : 'not allowed, tap Full-screen alarm settings') + '.';
+      } catch (e) {}
+      $('permMsg').textContent = msg;
+      scrim2.classList.add('open');
+      scrim2.setAttribute('aria-hidden', 'false');
+    };
+    const close2 = () => { scrim2.classList.remove('open'); scrim2.setAttribute('aria-hidden', 'true'); };
+    $('gear').addEventListener('click', open2);
+    $('sClose').addEventListener('click', close2);
+    scrim2.addEventListener('click', e => { if (e.target === scrim2) close2(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') close2(); });
+
+    const cleanHost = v => v.trim().replace(/^https?:\/\//, '').replace(/\/.*$/, '');
+    $('sTest').addEventListener('click', () => {
+      const h = cleanHost($('fHost').value);
+      if (!h) { $('hostMsg').textContent = 'Enter an address, for example 192.168.1.37.'; return; }
+      $('hostMsg').textContent = 'Testing…';
+      const c = new AbortController();
+      const t = setTimeout(() => c.abort(), 4000);
+      fetch('http://' + h + '/state', { cache: 'no-store', signal: c.signal })
+        .then(r => r.json())
+        .then(() => { $('hostMsg').textContent = 'Connected. The controller answered.'; })
+        .catch(() => { $('hostMsg').textContent = 'Can\u2019t reach the controller. Check the address and that this phone is on the same Wi-Fi.'; })
+        .finally(() => clearTimeout(t));
+    });
+    $('sSave').addEventListener('click', () => {
+      const h = cleanHost($('fHost').value);
+      if (!h) { $('hostMsg').textContent = 'Enter an address, for example 192.168.1.37.'; return; }
+      Android.setHost(h);
+      HOST = h;
+      try { if (ws) ws.close(); } catch (e) {}
+      ws = null;
+      clearTimeout(retryTimer);
+      connect();
+      startPolling();
+      poll();
+      close2();
+    });
+    $('sAlarm').addEventListener('click', () => {
+      Android.testAlarm(10);
+      $('permMsg').textContent = 'This phone will ring in 10 seconds. Lock the screen to test it properly.';
+    });
+    $('sNotif').addEventListener('click', () => Android.openSettings('notifications'));
+    $('sFull').addEventListener('click', () => Android.openSettings('fullscreen'));
+    $('sBatt').addEventListener('click', () => Android.openSettings('battery'));
+  }
+
+  render();
+  connect();
+  startPolling();
+})();
+</script>
+</body>
+</html>
